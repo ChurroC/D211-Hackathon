@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- http://127.0.0.1:5173/grid/ -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./main.js" defer></script>
+        <h1>Sequence Memory</h1>
+        <h3>
+            Write the first letter of each background color in the sequence
+            don't include the grey
+        </h3>
+        <title></title>
+      <link rel="stylesheet" crossorigin href="/assets/grid-BJ4UKioE.css">
+    </head>
+    <body>
+        <div id="score"></div>
+        <br />
+        <div id="start">
+            <button
+                onclick="displayGrid()
+            showHideTextBox('start')"
+                ;
+            >
+                Play!
+            </button>
+        </div>
+        <div id="info"></div>
+        <br />
+        <div id="hiddenStuff" style="display: none">
+            <input type="text" id="input" placeholder="" />
+            <button type="submit" onclick="check()">Submit</button>
+            <br />
+        </div>
+    </body>
+</html>
