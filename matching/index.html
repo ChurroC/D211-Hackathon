@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- http://127.0.0.1:5173/matching/ -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./main.js" defer></script>
+        <link rel="stylesheet" href="./index.css" />
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <h1 class="border">Cool.io</h1>
+        <br />
+        <h3>Memorize and retype the number shown on screen</h3>
+        <br />
+        <div id="score"></div>
+        <br />
+        <div id="num" style="scale: 2"></div>
+        <br />
+        <div id="start">
+            <button
+                onclick="numberMemory()
+            showHideTextBox('start')"
+                ;
+            >
+                Play!
+            </button>
+            
+            <div id="restart">
+                <h3 id="over"></h>
+                <h2 id="three"></h2>
+                <h2 id="two"></h2>
+                <h2 id="one"></h2></div>
+            <div id="seen">
+                <button 
+                onclick="
+                showHideTextBox('start')
+                numberMemory()
+                showHideTextBox('hiddenStuff')
+                document.getElementById('over').innerHTML = '';
+            document.getElementById('one').innerHTML = '';
+            document.getElementById('two').innerHTML = '';
+            document.getElementById('three').innerHTML = '';
+            ">
+                    Play!
+                </button>
+        </div>
+        <div id="hiddenStuff" style="display: none">
+            <input type="text" id="input" placeholder="" />
+            <button type="submit" onclick="check()">Submit</button>
+            <br />
+        </div>
+        <br />
+    </body>
+</html>

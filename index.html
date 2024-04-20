@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- http://127.0.0.1:5173 -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./main.js" defer></script>
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <header
+            class="sticky top-0 flex w-full justify-center border-b border-neutral-200 bg-white/60 px-6 backdrop-blur"
+        >
+            <nav class="flex w-full max-w-screen-2xl justify-between">
+                <!-- Left flexbox container -->
+                <div class="container flex h-16 items-center gap-6">
+                    <img src="public/coolio.png" class="text-lg mr-4 w-32" />
+                    <a href="/matching/" class="text-neutral-400 text-sm"
+                        >Number Matching</a
+                    >
+                    <a href="/verbal/" class="text-neutral-400 text-sm"
+                        >Verbal Memory</a
+                    >
+                    <a href="/grid/" class="text-neutral-400 text-sm"
+                        >Color Sequence</a
+                    >
+                </div>
+                <!-- Right flexbox container -->
+                <div class="flex items-center justify-end gap-4">
+                    <a
+                        href="/stats/"
+                        class="bg-neutral-900 px-2 font-medium text-white w-14 relative flex h-8 items-center justify-center rounded-md transition after:absolute after:inset-0 after:rounded-md after:border-gray-300 after:transition hover:after:scale-110"
+                    >
+                        Stats
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main
+            style="
+                background-image: url('gradient.svg');
+                background-position: center top;
+            "
+            class="h-80"
+        >
+            <div
+                class="w-full h-80 bg-white/60 backdrop-blur-3xl flex justify-center items-center flex-col"
+            >
+                <img
+                    src="coolio.png"
+                    class="text-lg w-44 m-auto my-10 mb-20 mt-52"
+                />
+                <h1 class="font-bold text-5xl tracking-tighter mb-3">
+                    Human Benchmark System
+                </h1>
+                <p class="text-neutral-400">
+                    How do you compare to your friends
+                </p>
+            </div>
+            <!-- games -->
+            <div class="mt-80 flex w-3/4 m-auto flex-row justify-center gap-8">
+                <a
+                    class="border size-36 rounded-lg flex flex-col gap-5 p-2 text-center hover:bg-neutral-100 transition"
+                    href="/matching/"
+                >
+                    <div>Number Matching</div>
+                    <div>This is a game to number match</div>
+                </a>
+                <a
+                    href="/verbal/"
+                    class="border size-36 rounded-lg flex flex-col gap-5 p-2 text-center hover:bg-neutral-100 transition"
+                >
+                    <div>Verbal <br />Memory</div>
+                    <div>This is a game to verbal memory</div>
+                </a>
+                <a
+                    href="/grid/"
+                    class="border size-36 rounded-lg flex flex-col gap-5 p-2 text-center hover:bg-neutral-100 transition"
+                >
+                    <div>Color <br />Sequence</div>
+                    <div>This is is game Color Sequence</div>
+                </a>
+            </div>
+        </main>
+    </body>
+</html>
