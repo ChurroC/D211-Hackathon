@@ -23,7 +23,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function numberMemory() {
+window.numberMemory = async function numberMemory() {
     console.log("main");
     randNum = randomInt(upperBound / 10, upperBound - 1);
     console.log(randNum);
@@ -32,9 +32,9 @@ async function numberMemory() {
     console.log("alf");
     document.getElementById("num").innerHTML = "";
     showHideTextBox("hiddenStuff");
-}
+};
 
-async function check() {
+window.check = async function check() {
     let cont = true;
     let inputNum = document.getElementById("input").value;
     let output = "The number was " + randNum;
@@ -73,9 +73,9 @@ async function check() {
         console.log("heh");
         upperBound = 10;
     }
-}
+};
 
-function showHideTextBox(box) {
+window.showHideTextBox = function showHideTextBox(box) {
     console.log("box");
     var x = document.getElementById(box);
     if (x.style.display == "none") {
@@ -83,4 +83,4 @@ function showHideTextBox(box) {
     } else {
         x.style.display = "none";
     }
-}
+};

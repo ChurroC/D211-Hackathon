@@ -1,16 +1,16 @@
-// vite.config.js
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import { sync } from "glob";
 
 export default defineConfig({
+  root: "src",
+  base: "./",
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        grid: resolve(__dirname, "grid/index.html"),
-        matching: resolve(__dirname, "matching/index.html"),
-        stats: resolve(__dirname, "stats/index.html")
-      }
-    }
-  }
+      input: sync(resolve(__dirname, "src", "**/*.html"))
+    },
+    outDir: resolve(__dirname, "docs"),
+    emptyOutDir: true
+  },
+  publicDir: "../public"
 });

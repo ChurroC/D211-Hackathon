@@ -3,17 +3,16 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="icon" type="image/svg+xml" href="../vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="module" src="./module.js" defer></script>
-        <script src="./main.js" defer></script>
-        <link rel="stylesheet" href="./index.css" />
+      <script type="module" crossorigin src="../assets/index-40siMVIi.js"></script>
+      <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-B5Qt9EMX.js">
+      <link rel="stylesheet" crossorigin href="../assets/index-BMUDCUO_.css">
+    </head>
+    <body>
         <h1>Verbal Memory</h1>
         <h5>A random word will be generated.</h5>
         <h5>Select seen or new</h5>
-        <title></title>
-    </head>
-    <body>
         <div id="restart">
             <h3 id="over"></h>
             <h2 id="three"></h2>
@@ -21,16 +20,7 @@
             <h2 id="one"></h2></div>
         <div id="seen">
             <button 
-            onclick="
-            showHideTextBox('seen')
-            displayWord()
-            show()
-            showHideTextBox('hiddenStuff')
-            document.getElementById('over').innerHTML = '';
-        document.getElementById('one').innerHTML = '';
-        document.getElementById('two').innerHTML = '';
-        document.getElementById('three').innerHTML = '';
-        ">
+            onclick="start()">
                 Play!
             </button>
         </div>
@@ -38,8 +28,6 @@
             <h6 id="score"></h6>
             <h6 id="lives"></h6>
             <h3 id="word"><h3>
-                
-
             <button id="see" onclick="seenWords()">Seen</button>
             <button id="new" onclick="newWords()">New</button>
             <br />

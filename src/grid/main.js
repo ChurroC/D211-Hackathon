@@ -23,7 +23,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function showHideTextBox(box) {
+window.showHideTextBox = function showHideTextBox(box) {
     console.log("box");
     var x = document.getElementById(box);
     if (x.style.display == "none") {
@@ -31,9 +31,9 @@ async function showHideTextBox(box) {
     } else {
         x.style.display = "none";
     }
-}
+};
 
-async function displayGrid() {
+window.displayGrid = async function displayGrid() {
     let randInt = randomInt(1, 6);
     //num += randInt;
     sequence.push(randInt);
@@ -97,9 +97,9 @@ async function displayGrid() {
     }
     showHideTextBox("hiddenStuff");
     console.log(num);
-}
+};
 
-async function check() {
+window.check = async function check() {
     showHideTextBox("hiddenStuff");
     let input = document.getElementById("input").value;
     console.log(input);
@@ -125,4 +125,4 @@ async function check() {
         document.getElementById("input").value = "";
         num = "";
     }
-}
+};

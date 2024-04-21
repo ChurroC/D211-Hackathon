@@ -1,3 +1,5 @@
+import { generate } from "random-words";
+
 let wordsFound = [generate()];
 let currentWord;
 let score = 0;
@@ -16,7 +18,7 @@ currentWord = generate();
         console.log("Game over");
     } */
 
-function seenWords() {
+window.seenWords = function seenWords() {
     console.log("made into function(seenWords)");
     console.log(score);
     console.log(lives);
@@ -30,9 +32,9 @@ function seenWords() {
 
     displayWord();
     show();
-}
+};
 
-function newWords() {
+window.newWords = function newWords() {
     console.log("made into function(newWords)");
     console.log(score);
     console.log(lives);
@@ -46,7 +48,7 @@ function newWords() {
     }
     displayWord();
     show();
-}
+};
 
 function showHideTextBox(id) {
     // testing purposes
@@ -105,8 +107,13 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function start() {
+window.start = function start() {
     showHideTextBox("seen");
     displayWord();
     show();
-}
+    showHideTextBox("hiddenStuff");
+    document.getElementById("over").innerHTML = "";
+    document.getElementById("one").innerHTML = "";
+    document.getElementById("two").innerHTML = "";
+    document.getElementById("three").innerHTML = "";
+};

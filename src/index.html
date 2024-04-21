@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="./vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="module" src="./main.js" defer></script>
+        <script src="./main.js" type="module" defer></script>
         <title>Hello World!</title>
     </head>
     <body>
@@ -37,18 +37,12 @@
                 </div>
             </nav>
         </header>
-        <main
-            style="
-                background-image: url('gradient.svg');
-                background-position: center top;
-            "
-            class="h-80"
-        >
+        <main class="h-80 bg-[url('/gradient.svg')] bg-top bg-no-repeat">
             <div
                 class="w-full h-80 bg-white/60 backdrop-blur-3xl flex justify-center items-center flex-col"
             >
                 <img
-                    src="./coolio.png"
+                    src="/coolio.png"
                     class="text-lg w-44 m-auto my-10 mb-20 mt-52"
                 />
                 <h1 class="font-bold text-5xl tracking-tighter mb-3">
